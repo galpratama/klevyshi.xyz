@@ -46,9 +46,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/klevy-avatar-96.png", type: "image/png", sizes: "96x96" },
+      { url: "/favicon.ico", sizes: "any", type: "image/x-icon" },
+      { url: "/logo-mark.svg", type: "image/svg+xml" },
+      { url: "/logo-mark-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/logo-mark-96.png", type: "image/png", sizes: "96x96" },
     ],
+    shortcut: ["/favicon.ico"],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
 };

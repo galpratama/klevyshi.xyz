@@ -2,7 +2,6 @@ import Image from "next/image";
 import {
   ArrowUpRight,
   InstagramIcon,
-  PixelSpark,
   RobloxIcon,
   TikTokIcon,
 } from "@/components/brand-icons";
@@ -56,8 +55,15 @@ export default function Home() {
 
       <header className="site-header">
         <a className="brand-mark" href="#top" aria-label="Klevyshi home">
-          <span>K</span>
-          <i aria-hidden="true" />
+          <Image
+            className="brand-icon"
+            src="/logo-mark.svg"
+            alt=""
+            width={48}
+            height={48}
+            priority
+          />
+          <span className="brand-word">KLEVYSHI</span>
         </a>
         <div className="header-label">
           <span className="status-dot" aria-hidden="true" />
@@ -99,7 +105,7 @@ export default function Home() {
                   <p className="handle">@klevyshi</p>
                 </div>
                 <div className="mini-emblem" aria-hidden="true">
-                  <PixelSpark />
+                  <Image src="/logo-mark.svg" alt="" width={48} height={48} />
                 </div>
               </div>
 

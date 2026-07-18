@@ -33,12 +33,3 @@ export function RobloxIcon({ className }: IconProps) {
     </svg>
   );
 }
-
-export function PixelSpark({ className }: IconProps) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M10 2h4v6h6v4h-6v10h-4V12H4V8h6V2Z" fill="currentColor" />
-      <path d="M19 15h2v2h-2v-2ZM3 17h3v3H3v-3Z" fill="currentColor" opacity=".6" />
-    </svg>
-  );
-}

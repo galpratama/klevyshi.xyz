@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { LOGO_DATA_URI } from "@/lib/logo-data";
 
 export const alt = "Klevyshi — Personal Space";
 export const size = { width: 1200, height: 630 };
@@ -22,11 +23,11 @@ export default function OpenGraphImage() {
         <div style={{ position: "absolute", inset: 0, display: "flex", background: "linear-gradient(115deg, rgba(255,255,255,.035), transparent 38%, rgba(87,190,232,.07))" }} />
         <div style={{ width: "100%", display: "flex", alignItems: "center", padding: "72px 82px", gap: 62, position: "relative" }}>
           <img
-            src="https://cdn.discordapp.com/avatars/190803642239025153/52723ce07d21664df90eb543b11fff8e.png?size=256"
-            width={250}
-            height={250}
-            alt=""
-            style={{ borderRadius: 999, border: "7px solid #17132a", boxShadow: "0 0 0 2px rgba(207,156,255,.45)" }}
+            src={LOGO_DATA_URI}
+            width={264}
+            height={264}
+            alt="Klevyshi logo"
+            style={{ objectFit: "contain" }}
           />
           <div style={{ display: "flex", flexDirection: "column", maxWidth: 700 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, color: "#cf9cff", fontSize: 19, letterSpacing: 6, marginBottom: 24 }}>

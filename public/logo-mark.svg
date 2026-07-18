@@ -1,0 +1,39 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="surface" x1="70" y1="42" x2="430" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B1632"/>
+      <stop offset="0.55" stop-color="#100D20"/>
+      <stop offset="1" stop-color="#090814"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="143" y1="123" x2="380" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F2E7FF"/>
+      <stop offset="0.42" stop-color="#C48BFF"/>
+      <stop offset="0.76" stop-color="#9D75FF"/>
+      <stop offset="1" stop-color="#72D9FF"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="76" y1="50" x2="438" y2="456" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E2C6FF" stop-opacity="0.5"/>
+      <stop offset="0.5" stop-color="#8B63D4" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#72D9FF" stop-opacity="0.36"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(334 161) rotate(131) scale(278)">
+      <stop stop-color="#A86AFF" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#A86AFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#020107" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <path d="M126 24H386C442.333 24 488 69.667 488 126V340L340 488H126C69.667 488 24 442.333 24 386V126C24 69.667 69.667 24 126 24Z" fill="url(#surface)" filter="url(#shadow)"/>
+  <path d="M126 25.5H386C441.505 25.5 486.5 70.495 486.5 126V339.379L339.379 486.5H126C70.495 486.5 25.5 441.505 25.5 386V126C25.5 70.495 70.495 25.5 126 25.5Z" stroke="url(#rim)" stroke-width="3"/>
+  <path d="M126 24H386C442.333 24 488 69.667 488 126V340L340 488H126C69.667 488 24 442.333 24 386V126C24 69.667 69.667 24 126 24Z" fill="url(#glow)"/>
+
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M132 116H208V211.64L298.914 116H396L278.391 237.408L404 396H309.69L208 265.124V396H132V116ZM208 211.64V265.124L254.32 237.03L208 211.64Z" fill="url(#mark)"/>
+  <path d="M208 211.64L254.32 237.03L208 265.124V211.64Z" fill="#0C0A18" fill-opacity="0.92"/>
+
+  <rect x="382" y="82" width="38" height="38" rx="10" fill="#72D9FF"/>
+  <rect x="382" y="82" width="38" height="38" rx="10" fill="#FFFFFF" fill-opacity="0.18"/>
+  <rect x="91" y="386" width="20" height="20" rx="5" fill="#B274FF" fill-opacity="0.82"/>
+  <path d="M351 470L470 351" stroke="#72D9FF" stroke-opacity="0.48" stroke-width="8" stroke-linecap="round"/>
+</svg>
