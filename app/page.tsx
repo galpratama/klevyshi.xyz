@@ -10,14 +10,14 @@ const socialLinks = [
   {
     name: "Roblox",
     handle: "klevyshi",
-    note: "cari aku di map Podcasts",
+    note: "mostly here",
     href: "https://www.roblox.com/share?code=70e0c65e2c6c4f4bad3270886038109a&type=Profile&source=ProfileShare&stamp=1784366537053",
     icon: RobloxIcon,
   },
   {
     name: "Instagram",
     handle: "@klevyshi",
-    note: "things outside the booth",
+    note: "things outside the game",
     href: "https://www.instagram.com/klevyshi",
     icon: InstagramIcon,
   },
@@ -30,28 +30,27 @@ const socialLinks = [
   },
 ];
 
+const interests = [
+  { label: "mostly playing", value: "Roblox + Ayodance" },
+  { label: "city brain", value: "Cities: Skylines" },
+  { label: "learning arc", value: "gitar, pelan-pelan" },
+  { label: "quiet rabbit hole", value: "coding dan ngulik" },
+  { label: "on repeat", value: "jazz, Coldiac, Ardhito, Laufey" },
+];
+
 const showFlow = [
   ["00:00", "spawn, terus cari booth yang enak"],
-  ["00:02", "mic check. biasanya sok formal dulu"],
+  ["00:02", "mic check. sok formal dulu dikit"],
   ["00:08", "mulai satu topik yang niatnya serius"],
   ["00:??", "udah lupa tadi awalnya bahas apa"],
 ];
 
-const rotation = [
-  "Persona 3 Reload",
-  "Roblox",
-  "Minecraft",
-  "Cities: Skylines II",
-  "Honkai: Star Rail",
-  "Final Fantasy VII Remake",
-];
-
-const wave = [28, 52, 38, 76, 44, 88, 61, 36, 72, 94, 48, 64, 32, 82, 58, 40, 91, 68, 46, 79, 34, 55, 86, 63, 43, 74, 98, 57, 37, 69, 49, 84, 42, 62, 93, 53];
+const wave = [32, 58, 41, 79, 49, 91, 65, 38, 74, 96, 52, 69, 35, 84, 61, 43, 93, 72, 48, 81, 37, 57, 88, 66, 45, 77, 98, 60, 39, 71, 51, 86];
 
 export default function Home() {
   return (
     <div className="page-root">
-      <a className="skip-link" href="#main-content">langsung ke siaran</a>
+      <a className="skip-link" href="#main-content">langsung ke konten</a>
       <div className="noise" aria-hidden="true" />
 
       <header className="site-header">
@@ -59,161 +58,186 @@ export default function Home() {
           <Image src="/logo-mark.svg" alt="" width={44} height={44} priority />
           <span>
             <strong>KLEVYSHI</strong>
-            <small>internet radio-ish</small>
+            <small>personal corner on the internet</small>
           </span>
         </a>
         <nav aria-label="Main navigation">
-          <a href="#ceritanya">ceritanya</a>
-          <a href="#booth">the booth</a>
+          <a href="#about">about</a>
+          <a href="#interests">things i like</a>
+          <a href="#radio">103.9 FM</a>
           <a href="#elsewhere">find me</a>
         </nav>
-        <p className="header-signal"><i aria-hidden="true" /> signal: kadang ada</p>
+        <p className="header-mood"><i aria-hidden="true" /> mood: calm, mostly</p>
       </header>
 
       <main id="main-content">
-        <section id="top" className="radio-hero" aria-labelledby="hero-title">
-          <div className="hero-copy">
-            <p className="station-code">KLEVYSHI.XYZ / COBA CARI FREKUENSINYA</p>
-            <p className="record-label"><span aria-hidden="true" /> rec, kalau lagi main</p>
-            <h1 id="hero-title">ceritanya<br /><em>radio.</em></h1>
-            <div className="hero-intro">
-              <p>
-                aku Klevy. kalau lagi nongkrong di map <strong>Podcasts</strong> di Roblox,
-                biasanya aku buka mic terus sok-sokan bawain acara radio.
-              </p>
-              <p>
-                ga ada frekuensi beneran. rundown rapi juga engga. yang ada cuma obrolan,
-                orang random yang mampir, terus topik yang belok ke mana-mana.
-              </p>
-            </div>
-          </div>
-
-          <figure className="hero-art">
+        <section id="top" className="personal-hero" aria-labelledby="hero-title">
+          <figure className="personal-hero-media">
             <Image
-              src="/ceritanya-radio-sunset.webp"
-              alt="Warm sunset over wooden stairs and a large tree"
+              src="/klevy-hero.webp"
+              alt="Klevy standing in front of a warm wooden building at sunset"
               fill
               priority
-              sizes="(max-width: 760px) 100vw, 62vw"
+              sizes="(max-width: 760px) 100vw, 1240px"
             />
-            <div className="image-shade" aria-hidden="true" />
-            <figcaption>golden hour before the mic turns on.</figcaption>
-            <div className="host-stamp">
-              <Image src="/klevy-avatar-180.webp" alt="Klevy's avatar" width={72} height={72} />
-              <span><small>your host, apparently</small><strong>KLEVY</strong></span>
-            </div>
+            <div className="personal-hero-shade" aria-hidden="true" />
           </figure>
+
+          <div className="personal-hero-copy">
+            <p className="micro-label">KLEVYSHI.XYZ / PERSONAL CORNER</p>
+            <p className="hero-traits"><span>friendly</span><span>calm</span><span>playful</span></p>
+            <h1 id="hero-title">hi, aku<br /><em>Klevy.</em></h1>
+            <p className="hero-lede">
+              biasanya lagi main game, dengerin jazz, ngulik sesuatu, atau tiba-tiba
+              sok jadi penyiar di Roblox. isinya random sih. ya kurang lebih kayak orangnya.
+            </p>
+            <p className="hero-aliases">Klevy buat sehari-hari. Klepi boleh. Bang Klep juga udah terlanjur nempel.</p>
+          </div>
+
+          <p className="hero-caption">caught in the middle, literally.</p>
         </section>
 
-        <div className="frequency-strip" aria-label="Ceritanya Radio station details">
-          <div><span>88.?? FM</span><small>frekuensinya ngarang</small></div>
-          <div><span>MAP</span><small>Podcasts, Roblox</small></div>
-          <div><span>MIC</span><small>on kalau berani</small></div>
-          <div><span>RUNDOWN</span><small>optional bgt</small></div>
+        <div className="identity-strip" aria-label="Klevy at a glance">
+          <div><span>VIBE</span><small>friendly, calm, playful</small></div>
+          <div><span>CALL ME</span><small>Klevy / Klepi / Bang Klep</small></div>
+          <div><span>MOSTLY ON</span><small>Roblox + Ayodance</small></div>
+          <div><span>NOW PLAYING</span><small>something jazzy</small></div>
         </div>
 
-        <section id="ceritanya" className="story-section" aria-labelledby="story-title">
-          <div className="section-index">
-            <span>01 / ORIGIN STORY</span>
-            <p>ini bagian yang harusnya dijelasin dengan serius.</p>
+        <section id="about" className="about-section" aria-labelledby="about-title">
+          <div className="section-heading">
+            <p className="section-label">01 / KLEVY LORE</p>
+            <h2 id="about-title">kalau lagi diem,<br />mungkin cuma plenger.</h2>
           </div>
-          <div className="story-body">
-            <h2 id="story-title">awalnya cuma main Roblox.</h2>
-            <p className="story-lead">
-              terus nemu map Podcasts. ada studio, ada kursi, ada mic, dan ya... masa didiemin?
-            </p>
-            <div className="story-columns">
-              <p>
-                akhirnya duduk, nyalain mic, terus ngomong kayak penyiar radio. kadang ada yang
-                ikut ngobrol. kadang cuma aku sama pikiran sendiri. dua-duanya masih masuk program.
-              </p>
-              <p>
-                nama segmennya <strong>Ceritanya Radio</strong>. kenapa “ceritanya”? karena ini memang
-                pura-pura radio, tapi obrolannya beneran. somehow itu justru bagian paling seru.
-              </p>
-            </div>
-            <blockquote>
-              “selamat datang di Ceritanya Radio, tempat topik serius bisa jadi gajelas dalam dua menit.”
-            </blockquote>
 
-            <ol className="show-flow" aria-label="Alur siaran Ceritanya Radio">
+          <div className="about-layout">
+            <figure className="section-art about-art">
+              <Image
+                src="/klevy-about.webp"
+                alt="Klevy at a desk with a laptop, guitar, and miniature city models"
+                fill
+                sizes="(max-width: 900px) 100vw, 58vw"
+              />
+              <figcaption>coding, gitar, terus lupa tadi mau ngapain.</figcaption>
+            </figure>
+
+            <div className="about-copy">
+              <p className="about-lead">friendly, calm, playful. urutannya bisa berubah tergantung hari.</p>
+              <p>
+                aku sering plenger sih. tapi begitu obrolannya serius, mendadak bisa panjang.
+                apalagi kalau topiknya nyangkut sama sesuatu yang lagi aku pelajarin atau ngulik sendiri.
+              </p>
+              <p>
+                sisanya cukup sederhana. main game, utak-atik coding, nyoba belajar gitar,
+                terus balik lagi ke hal yang bikin penasaran. kadang selesai. kadang jadi tab browser baru.
+              </p>
+              <div className="lore-note">
+                <span>small lore</span>
+                <p>kalem bukan berarti ga random. randomnya cuma nunggu timing.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="interests" className="interests-section" aria-labelledby="interests-title">
+          <div className="section-heading split-heading">
+            <p className="section-label">02 / CURRENTLY INTO</p>
+            <h2 id="interests-title">main sebentar.<br />tahu-tahu udah malam.</h2>
+          </div>
+
+          <figure className="wide-art">
+            <Image
+              src="/klevy-play.webp"
+              alt="Klevy playing a rhythm game in a neon-lit arcade"
+              fill
+              sizes="(max-width: 760px) 100vw, 1240px"
+            />
+            <figcaption>Ayodance energy, tanpa harus jago dulu.</figcaption>
+          </figure>
+
+          <div className="interests-list">
+            {interests.map((item, index) => (
+              <div key={item.label}>
+                <span>0{index + 1}</span>
+                <small>{item.label}</small>
+                <strong>{item.value}</strong>
+              </div>
+            ))}
+          </div>
+
+          <div className="music-note">
+            <p>kalau lagi ga main</p>
+            <blockquote>
+              biasanya ada jazz di background. Coldiac, Ardhito Pramono, Laufey,
+              terus siapa pun yang bikin malam terasa sedikit lebih pelan.
+            </blockquote>
+          </div>
+        </section>
+
+        <section id="radio" className="radio-feature" aria-labelledby="radio-title">
+          <figure className="radio-art">
+            <Image
+              src="/klevy-radio.webp"
+              alt="Klevy hosting Ceritanya Radio in a warm podcast booth with a 103.9 FM display"
+              fill
+              sizes="(max-width: 900px) 100vw, 56vw"
+            />
+          </figure>
+
+          <div className="radio-copy">
+            <p className="section-label">03 / ONE OF MY THINGS</p>
+            <p className="frequency"><i aria-hidden="true" /> 103.9 FM</p>
+            <h2 id="radio-title">terus, ada<br /><em>Ceritanya Radio.</em></h2>
+            <p className="radio-lede">
+              kalau lagi mampir ke map Podcasts di Roblox, kadang aku duduk di booth,
+              buka mic, lalu bawain obrolan ala radio. frekuensinya ngasal. obrolannya kadang engga.
+            </p>
+            <p>
+              di sini sisi playful sama sisi seriusku suka ketemu. bisa mulai dari game,
+              cerita hari itu, atau opini random. beberapa menit kemudian biasanya udah belok ke mana-mana.
+            </p>
+
+            <div className="mini-wave" aria-hidden="true">
+              {wave.map((height, index) => <i key={index} style={{ height: `${height}%` }} />)}
+            </div>
+
+            <ol className="compact-flow" aria-label="Alur Ceritanya Radio">
               {showFlow.map(([time, text]) => (
-                <li key={time}>
-                  <time>{time}</time>
-                  <span>{text}</span>
-                </li>
+                <li key={time}><time>{time}</time><span>{text}</span></li>
               ))}
             </ol>
           </div>
         </section>
 
-        <section id="booth" className="booth-section" aria-labelledby="booth-title">
-          <div className="booth-copy">
-            <p className="section-label">02 / MIC IS ON</p>
-            <h2 id="booth-title">script? ya...<br />lihat nanti.</h2>
-            <p>
-              Ceritanya Radio itu alasan buat ngobrol. bisa soal game, cerita hari ini,
-              opini random, atau sesuatu yang baru kepikiran lima detik sebelum mic nyala.
-            </p>
-            <p className="side-note">ga perlu terlalu dibikin serius sih.</p>
-          </div>
-
-          <div className="radio-console">
-            <div className="console-head">
-              <span>CR-01 / INPUT</span>
-              <span className="console-rec"><i aria-hidden="true" /> REC-ish</span>
-            </div>
-            <div className="waveform" aria-hidden="true">
-              {wave.map((height, index) => <i key={index} style={{ height: `${height}%` }} />)}
-            </div>
-            <p className="console-quote">
-              “selamat sore, malam, atau kapan pun. frekuensinya ga ketemu? iya, emang ga ada.”
-            </p>
-            <dl className="console-meta">
-              <div><dt>host</dt><dd>Klevy</dd></div>
-              <div><dt>platform</dt><dd>Roblox</dd></div>
-              <div><dt>map</dt><dd>Podcasts</dd></div>
-              <div><dt>format</dt><dd>ngobrol dulu, mikir belakangan</dd></div>
-            </dl>
-          </div>
-        </section>
-
         <section id="elsewhere" className="elsewhere-section" aria-labelledby="elsewhere-title">
-          <div className="elsewhere-heading">
-            <p className="section-label">03 / STATION PRESETS</p>
-            <h2 id="elsewhere-title">kalau booth-nya kosong,<br />mungkin aku ada di sini.</h2>
+          <div className="section-heading split-heading">
+            <p className="section-label">04 / FIND ME</p>
+            <h2 id="elsewhere-title">kalau mau nyapa,<br />aku biasanya ada di sini.</h2>
           </div>
 
-          <nav className="preset-list" aria-label="Klevy's social profiles">
+          <nav className="social-list" aria-label="Klevy's social profiles">
             {socialLinks.map((link, index) => {
               const Icon = link.icon;
               return (
                 <a key={link.name} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={`Buka profil ${link.name} Klevy`}>
-                  <span className="preset-number">0{index + 1}</span>
-                  <span className="preset-icon"><Icon /></span>
-                  <span className="preset-name"><strong>{link.name}</strong><small>{link.handle}</small></span>
-                  <span className="preset-note">{link.note}</span>
-                  <ArrowUpRight className="preset-arrow" />
+                  <span className="social-number">0{index + 1}</span>
+                  <span className="social-icon"><Icon /></span>
+                  <span className="social-name"><strong>{link.name}</strong><small>{link.handle}</small></span>
+                  <span className="social-note">{link.note}</span>
+                  <ArrowUpRight className="social-arrow" />
                 </a>
               );
             })}
           </nav>
-        </section>
-
-        <section className="rotation-section" aria-labelledby="rotation-title">
-          <p id="rotation-title">SIDE B / YANG JUGA SERING MUTER</p>
-          <ul>
-            {rotation.map((game) => <li key={game}>{game}</li>)}
-          </ul>
         </section>
       </main>
 
       <footer className="site-footer">
         <div className="footer-brand">
           <Image src="/logo-mark.svg" alt="" width={40} height={40} />
-          <span><strong>CERITANYA RADIO</strong><small>siaran tidak terjadwal dari internet.</small></span>
+          <span><strong>KLEVYSHI</strong><small>personal corner on the internet.</small></span>
         </div>
-        <p>hosted with questionable preparation by Klevy.</p>
+        <p>friendly, calm, playful. tergantung ping.</p>
         <a href="#top">balik ke atas <span aria-hidden="true">↑</span></a>
       </footer>
     </div>

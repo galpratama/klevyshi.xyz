@@ -22,12 +22,22 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://klevyshi.xyz"),
   title: {
-    default: "Klevyshi | Ceritanya Radio",
+    default: "Klevyshi | Personal corner on the internet",
     template: "%s | Klevyshi",
   },
   description:
-    "Ceritanya Radio punya Klevy. Obrolan ala penyiar dari map Podcasts di Roblox, tanpa frekuensi dan tanpa rundown yang terlalu niat.",
-  keywords: ["Klevyshi", "Klevy", "Ceritanya Radio", "Podcasts Roblox", "Roblox", "radio"],
+    "Personal corner milik Klevy. Friendly, calm, playful. Suka Roblox, Ayodance, Cities: Skylines, coding, gitar, jazz, dan kadang siaran Ceritanya Radio di 103.9 FM.",
+  keywords: [
+    "Klevyshi",
+    "Klevy",
+    "Klepi",
+    "Bang Klep",
+    "Roblox",
+    "Ayodance",
+    "Cities Skylines",
+    "Ceritanya Radio",
+    "103.9 FM",
+  ],
   authors: [{ name: "Klevyshi", url: "https://klevyshi.xyz" }],
   creator: "Klevyshi",
   alternates: { canonical: "/" },
@@ -36,13 +46,13 @@ export const metadata: Metadata = {
     locale: "id_ID",
     url: "https://klevyshi.xyz",
     siteName: "Klevyshi",
-    title: "Klevyshi | Ceritanya Radio",
-    description: "Map Podcasts, mic on, terus ngobrol aja dulu.",
+    title: "Klevyshi | Personal corner on the internet",
+    description: "Friendly, calm, playful. Kadang plenger, kadang ngomongnya kepanjangan.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Klevyshi | Ceritanya Radio",
-    description: "Map Podcasts, mic on, terus ngobrol aja dulu.",
+    title: "Klevyshi | Personal corner on the internet",
+    description: "Friendly, calm, playful. Kadang plenger, kadang ngomongnya kepanjangan.",
   },
   icons: {
     icon: [
@@ -60,10 +70,11 @@ const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Klevyshi",
-  alternateName: "Klevy",
+  alternateName: ["Klevy", "Klepi", "Bang Klep"],
   url: "https://klevyshi.xyz",
-  image: "https://klevyshi.xyz/klevy-avatar.webp",
-  description: "Host Ceritanya Radio di map Podcasts, Roblox.",
+  image: "https://klevyshi.xyz/klevy-hero.webp",
+  description:
+    "Friendly, calm, playful. Suka Roblox, Ayodance, Cities: Skylines, coding, belajar gitar, jazz, dan membawakan Ceritanya Radio.",
   sameAs: [
     "https://www.instagram.com/klevyshi",
     "https://www.tiktok.com/@klevyshi",
