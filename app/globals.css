@@ -430,24 +430,114 @@ p, li, dd, blockquote { text-wrap: pretty; }
 .compact-flow time { color: var(--orange); font: 500 9px var(--font-plex), monospace; }
 .compact-flow span { color: #c3bbc2; font-size: 13px; }
 
-.social-list { border-top: 1px solid var(--line); }
-.social-list a {
-  min-height: 112px;
+.social-board {
   display: grid;
-  grid-template-columns: 70px 50px minmax(150px, 1.2fr) 1fr 28px;
-  align-items: center;
-  gap: 24px;
-  border-bottom: 1px solid var(--line);
-  transition: color 160ms var(--ease-out), background-color 160ms var(--ease-out), padding 160ms var(--ease-out);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 228px);
+  gap: 16px;
 }
-.social-number { color: var(--subtle); font: 400 10px var(--font-plex), monospace; }
-.social-icon { width: 46px; height: 46px; display: grid; place-items: center; border: 1px solid #3a3440; }
+.social-poster {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  transition: transform 220ms var(--ease-out), border-color 180ms var(--ease-out), box-shadow 220ms var(--ease-out);
+}
+.social-poster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.social-poster--roblox {
+  grid-column: 1 / span 7;
+  grid-row: 1 / span 2;
+  background: #151219;
+}
+.social-poster--roblox::after {
+  background:
+    linear-gradient(90deg, rgba(11, 10, 13, .98) 0%, rgba(11, 10, 13, .84) 39%, rgba(11, 10, 13, .18) 72%),
+    linear-gradient(0deg, rgba(168, 140, 240, .15), transparent 42%);
+}
+.social-poster--instagram {
+  grid-column: 8 / -1;
+  grid-row: 1;
+  color: #f5dce7;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(255, 117, 79, .3), transparent 38%),
+    #24151f;
+}
+.social-poster--tiktok {
+  grid-column: 8 / -1;
+  grid-row: 2;
+  color: #d9f4f3;
+  background:
+    radial-gradient(circle at 90% 12%, rgba(105, 231, 235, .18), transparent 38%),
+    #101619;
+}
+.social-portrait {
+  position: absolute;
+  inset: 0 0 0 auto;
+  z-index: -2;
+  width: 70%;
+  overflow: hidden;
+}
+.social-portrait > img {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 380ms var(--ease-out), filter 220ms var(--ease-out);
+}
+.social-watermark {
+  position: absolute;
+  right: -24px;
+  bottom: -38px;
+  z-index: -1;
+  color: currentColor;
+  opacity: .08;
+  transform: rotate(-8deg);
+  transition: transform 280ms var(--ease-out), opacity 180ms var(--ease-out);
+}
+.social-watermark svg { width: 190px; height: 190px; }
+.social-poster--roblox .social-watermark { display: none; }
+.social-poster-top { display: flex; align-items: center; gap: 12px; }
+.social-number { color: rgba(238, 232, 223, .55); font: 500 9px var(--font-plex), monospace; letter-spacing: .12em; }
+.social-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(238, 232, 223, .24);
+  background: rgba(11, 10, 13, .26);
+  backdrop-filter: blur(8px);
+}
 .social-icon svg { width: 20px; height: 20px; }
-.social-name { display: flex; flex-direction: column; gap: 3px; }
-.social-name strong { font-size: 19px; }
-.social-name small { color: var(--subtle); font: 400 10px var(--font-plex), monospace; }
-.social-note { color: var(--muted); font-size: 13px; }
-.social-arrow { width: 19px; height: 19px; color: var(--orange); transition: transform 160ms var(--ease-out); }
+.social-name { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: flex-start; }
+.social-name small { color: rgba(238, 232, 223, .62); font: 500 9px var(--font-plex), monospace; text-transform: uppercase; letter-spacing: .15em; }
+.social-name strong { margin-top: 8px; font-size: clamp(30px, 3.4vw, 48px); font-weight: 600; line-height: .94; letter-spacing: -.045em; }
+.social-name > span { max-width: 280px; margin-top: 12px; color: rgba(238, 232, 223, .7); font-size: 12px; line-height: 1.5; }
+.social-poster--roblox .social-name strong { font-size: clamp(50px, 6vw, 78px); }
+.social-arrow {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  z-index: 3;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(238, 232, 223, .28);
+  background: rgba(11, 10, 13, .25);
+  backdrop-filter: blur(8px);
+  transition: transform 180ms var(--ease-out), background-color 180ms var(--ease-out);
+}
+.social-arrow svg { width: 19px; height: 19px; }
 
 .site-footer {
   min-height: 170px;
@@ -505,8 +595,10 @@ p, li, dd, blockquote { text-wrap: pretty; }
   .site-header nav a:hover { color: var(--foreground); background: var(--surface-soft); }
   .brand:hover > img { transform: rotate(-3deg); }
   .brand > img { transition: transform 160ms var(--ease-out); }
-  .social-list a:hover { padding-inline: 18px; color: var(--paper); background: #141117; }
-  .social-list a:hover .social-arrow { transform: translate(3px, -3px); }
+  .social-poster:hover { transform: translateY(-4px); border-color: rgba(238, 232, 223, .32); box-shadow: 0 18px 38px rgba(0, 0, 0, .24); }
+  .social-poster:hover .social-arrow { transform: translate(3px, -3px); background: rgba(11, 10, 13, .54); }
+  .social-poster:hover .social-watermark { opacity: .14; transform: translate(-8px, -5px) rotate(-5deg); }
+  .social-poster:hover .social-portrait > img { transform: scale(1.035); filter: saturate(1.08); }
   .site-footer > a:hover { color: var(--foreground); }
 }
 
@@ -537,7 +629,10 @@ p, li, dd, blockquote { text-wrap: pretty; }
   .radio-feature { grid-template-columns: 1fr; gap: 48px; }
   .radio-art { min-height: 590px; }
   .radio-copy { padding: 0 28px 48px; }
-  .social-list a { grid-template-columns: 50px 46px minmax(140px, 1fr) 1fr 24px; gap: 16px; }
+  .social-board { grid-template-rows: 440px 210px; }
+  .social-poster--roblox { grid-column: 1 / -1; grid-row: 1; }
+  .social-poster--instagram { grid-column: 1 / span 6; grid-row: 2; }
+  .social-poster--tiktok { grid-column: 7 / -1; grid-row: 2; }
   .site-footer { grid-template-columns: 1fr 1fr; }
   .site-footer > p { display: none; }
 }
@@ -624,18 +719,25 @@ p, li, dd, blockquote { text-wrap: pretty; }
   .compact-flow li { grid-template-columns: 62px 1fr; min-height: 64px; }
   .compact-flow span { font-size: 12px; }
 
-  .social-list a {
-    min-height: 106px;
-    grid-template-columns: 38px 42px minmax(0, 1fr) 20px;
-    grid-template-rows: auto auto;
-    gap: 5px 12px;
+  .social-board { grid-template-columns: 1fr; grid-template-rows: 420px 208px 208px; gap: 12px; }
+  .social-poster { padding: 24px; }
+  .social-poster--roblox,
+  .social-poster--instagram,
+  .social-poster--tiktok { grid-column: 1; }
+  .social-poster--roblox { grid-row: 1; }
+  .social-poster--instagram { grid-row: 2; }
+  .social-poster--tiktok { grid-row: 3; }
+  .social-portrait { width: 78%; }
+  .social-poster--roblox::after {
+    background:
+      linear-gradient(90deg, rgba(11, 10, 13, .96) 0%, rgba(11, 10, 13, .76) 42%, rgba(11, 10, 13, .13) 76%),
+      linear-gradient(0deg, rgba(168, 140, 240, .18), transparent 42%);
   }
-  .social-number { grid-row: 1 / span 2; }
-  .social-icon { width: 40px; height: 40px; grid-row: 1 / span 2; }
-  .social-name { align-self: end; }
-  .social-name strong { font-size: 16px; }
-  .social-note { grid-column: 3; align-self: start; font-size: 10px; }
-  .social-arrow { grid-column: 4; grid-row: 1 / span 2; }
+  .social-poster--roblox .social-name strong { font-size: 50px; }
+  .social-name strong { font-size: 30px; }
+  .social-name > span { max-width: 230px; font-size: 11px; }
+  .social-arrow { right: 18px; top: 18px; width: 44px; height: 44px; }
+  .social-watermark svg { width: 164px; height: 164px; }
 
   .site-footer { min-height: 150px; grid-template-columns: 1fr; padding: 26px 0; }
   .site-footer > a { justify-self: start; }

@@ -9,13 +9,15 @@ import {
 const socialLinks = [
   {
     name: "Roblox",
+    slug: "roblox",
     handle: "klevyshi",
-    note: "mostly here",
+    note: "mostly here. kalau ga ketemu, mungkin lagi AFK.",
     href: "https://www.roblox.com/share?code=70e0c65e2c6c4f4bad3270886038109a&type=Profile&source=ProfileShare&stamp=1784366537053",
     icon: RobloxIcon,
   },
   {
     name: "Instagram",
+    slug: "instagram",
     handle: "@klevyshi",
     note: "things outside the game",
     href: "https://www.instagram.com/klevyshi",
@@ -23,8 +25,9 @@ const socialLinks = [
   },
   {
     name: "TikTok",
+    slug: "tiktok",
     handle: "@klevyshi",
-    note: "kalau lagi pengen upload",
+    note: "upload kalau mood-nya sempat",
     href: "https://www.tiktok.com/@klevyshi",
     icon: TikTokIcon,
   },
@@ -224,16 +227,34 @@ export default function Home() {
             <h2 id="elsewhere-title">kalau mau nyapa,<br />aku biasanya ada di sini.</h2>
           </div>
 
-          <nav className="social-list" aria-label="Klevy's social profiles">
+          <nav className="social-board" aria-label="Klevy's social profiles">
             {socialLinks.map((link, index) => {
               const Icon = link.icon;
               return (
-                <a key={link.name} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={`Buka profil ${link.name} Klevy`}>
-                  <span className="social-number">0{index + 1}</span>
-                  <span className="social-icon"><Icon /></span>
-                  <span className="social-name"><strong>{link.name}</strong><small>{link.handle}</small></span>
-                  <span className="social-note">{link.note}</span>
-                  <ArrowUpRight className="social-arrow" />
+                <a
+                  key={link.name}
+                  className={`social-poster social-poster--${link.slug}`}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Buka profil ${link.name} Klevy`}
+                >
+                  {link.slug === "roblox" && (
+                    <span className="social-portrait" aria-hidden="true">
+                      <Image src="/klevy-hero.webp" alt="" fill sizes="(max-width: 680px) 78vw, 500px" />
+                    </span>
+                  )}
+                  <span className="social-watermark" aria-hidden="true"><Icon /></span>
+                  <span className="social-poster-top">
+                    <span className="social-number">0{index + 1}</span>
+                    <span className="social-icon" aria-hidden="true"><Icon /></span>
+                  </span>
+                  <span className="social-name">
+                    <small>{link.name}</small>
+                    <strong>{link.handle}</strong>
+                    <span>{link.note}</span>
+                  </span>
+                  <span className="social-arrow" aria-hidden="true"><ArrowUpRight /></span>
                 </a>
               );
             })}
