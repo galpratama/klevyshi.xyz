@@ -42,3 +42,13 @@
 - `www` permanently redirects to the apex canonical domain.
 - The Vercel deployment for the production commit completed successfully.
 - Datacenter/headless probes may receive Vercel Security Checkpoint code 29; local browser QA and the authenticated deployment pipeline passed.
+
+## Ceritanya Radio revamp, 2026-07-18
+
+- [x] Replaced the generic hero and card-grid composition with an editorial radio narrative.
+- [x] Made the Roblox map Podcasts and Ceritanya Radio the primary story.
+- [x] Replaced the screenshot-derived banner with the supplied 1686x933 sunset artwork, optimized to a 200 KB WebP.
+- [x] Updated Indonesian copy, navigation, metadata, JSON-LD, error states, and generated Open Graph artwork.
+- [x] Verified zero horizontal overflow at 390px and full desktop/mobile visual integrity.
+- [x] Verified homepage, artwork, Open Graph, robots, sitemap, and custom 404 routes.
+- [x] Verified zero browser console errors, zero npm audit vulnerabilities, lint, TypeScript, and production build.

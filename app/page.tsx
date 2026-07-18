@@ -8,186 +8,213 @@ import {
 
 const socialLinks = [
   {
+    name: "Roblox",
+    handle: "klevyshi",
+    note: "cari aku di map Podcasts",
+    href: "https://www.roblox.com/share?code=70e0c65e2c6c4f4bad3270886038109a&type=Profile&source=ProfileShare&stamp=1784366537053",
+    icon: RobloxIcon,
+  },
+  {
     name: "Instagram",
     handle: "@klevyshi",
+    note: "things outside the booth",
     href: "https://www.instagram.com/klevyshi",
-    className: "social-instagram",
     icon: InstagramIcon,
   },
   {
     name: "TikTok",
     handle: "@klevyshi",
+    note: "kalau lagi pengen upload",
     href: "https://www.tiktok.com/@klevyshi",
-    className: "social-tiktok",
     icon: TikTokIcon,
-  },
-  {
-    name: "Roblox",
-    handle: "klevyshi",
-    href: "https://www.roblox.com/share?code=70e0c65e2c6c4f4bad3270886038109a&type=Profile&source=ProfileShare&stamp=1784366537053",
-    className: "social-roblox",
-    icon: RobloxIcon,
   },
 ];
 
-const games = [
-  { title: "Persona 3 Reload", group: "rpg", tone: "cyan" },
-  { title: "Persona 4 Golden", group: "rpg", tone: "yellow" },
-  { title: "Persona 5 Royal", group: "rpg", tone: "red" },
-  { title: "Final Fantasy VII Remake", group: "rpg", tone: "blue" },
-  { title: "Honkai: Star Rail", group: "rpg", tone: "violet" },
-  { title: "Cities: Skylines II", group: "simulation", tone: "sky" },
-  { title: "Roblox", group: "sandbox", tone: "lime" },
-  { title: "Minecraft", group: "sandbox", tone: "green" },
+const showFlow = [
+  ["00:00", "spawn, terus cari booth yang enak"],
+  ["00:02", "mic check. biasanya sok formal dulu"],
+  ["00:08", "mulai satu topik yang niatnya serius"],
+  ["00:??", "udah lupa tadi awalnya bahas apa"],
 ];
+
+const rotation = [
+  "Persona 3 Reload",
+  "Roblox",
+  "Minecraft",
+  "Cities: Skylines II",
+  "Honkai: Star Rail",
+  "Final Fantasy VII Remake",
+];
+
+const wave = [28, 52, 38, 76, 44, 88, 61, 36, 72, 94, 48, 64, 32, 82, 58, 40, 91, 68, 46, 79, 34, 55, 86, 63, 43, 74, 98, 57, 37, 69, 49, 84, 42, 62, 93, 53];
 
 export default function Home() {
   return (
     <div className="page-root">
-      <a className="skip-link" href="#main-content">
-        Skip to content
-      </a>
-
-      <div className="ambient ambient-one" aria-hidden="true" />
-      <div className="ambient ambient-two" aria-hidden="true" />
-      <div className="pixel-grid" aria-hidden="true" />
+      <a className="skip-link" href="#main-content">langsung ke siaran</a>
       <div className="noise" aria-hidden="true" />
 
       <header className="site-header">
-        <a className="brand-mark" href="#top" aria-label="Klevyshi home">
-          <Image
-            className="brand-icon"
-            src="/logo-mark.svg"
-            alt=""
-            width={48}
-            height={48}
-            priority
-          />
-          <span className="brand-word">KLEVYSHI</span>
+        <a className="brand" href="#top" aria-label="Klevyshi home">
+          <Image src="/logo-mark.svg" alt="" width={44} height={44} priority />
+          <span>
+            <strong>KLEVYSHI</strong>
+            <small>internet radio-ish</small>
+          </span>
         </a>
-        <div className="header-label">
-          <span className="status-dot" aria-hidden="true" />
-          personal space
-        </div>
+        <nav aria-label="Main navigation">
+          <a href="#ceritanya">ceritanya</a>
+          <a href="#booth">the booth</a>
+          <a href="#elsewhere">find me</a>
+        </nav>
+        <p className="header-signal"><i aria-hidden="true" /> signal: kadang ada</p>
       </header>
 
-      <main id="main-content" className="site-main">
-        <section id="top" className="hero" aria-labelledby="hero-title">
-          <article className="profile-card enter-one">
-            <div className="banner-wrap">
-              <Image
-                src="/twilight-banner.webp"
-                alt="Purple twilight over a wooden balcony and trees"
-                fill
-                priority
-                sizes="(max-width: 900px) 100vw, 42vw"
-              />
-              <div className="banner-vignette" aria-hidden="true" />
-              <span className="banner-code">KLV / 01</span>
+      <main id="main-content">
+        <section id="top" className="radio-hero" aria-labelledby="hero-title">
+          <div className="hero-copy">
+            <p className="station-code">KLEVYSHI.XYZ / COBA CARI FREKUENSINYA</p>
+            <p className="record-label"><span aria-hidden="true" /> rec, kalau lagi main</p>
+            <h1 id="hero-title">ceritanya<br /><em>radio.</em></h1>
+            <div className="hero-intro">
+              <p>
+                aku Klevy. kalau lagi nongkrong di map <strong>Podcasts</strong> di Roblox,
+                biasanya aku buka mic terus sok-sokan bawain acara radio.
+              </p>
+              <p>
+                ga ada frekuensi beneran. rundown rapi juga engga. yang ada cuma obrolan,
+                orang random yang mampir, terus topik yang belok ke mana-mana.
+              </p>
             </div>
+          </div>
 
-            <div className="profile-body">
-              <div className="avatar-wrap">
-                <Image
-                  src="/klevy-avatar-180.webp"
-                  alt="Klevyshi's profile avatar"
-                  width={180}
-                  height={180}
-                  priority
-                />
-                <span className="avatar-status" aria-label="Profile status accent" />
-              </div>
-
-              <div className="identity-row">
-                <div>
-                  <p className="overline">KLEVYSHI</p>
-                  <h2>Klevy</h2>
-                  <p className="handle">@klevyshi</p>
-                </div>
-                <div className="mini-emblem" aria-hidden="true">
-                  <Image src="/logo-mark.svg" alt="" width={48} height={48} />
-                </div>
-              </div>
-
-              <blockquote>“que sera sera.”</blockquote>
-
-              <div className="profile-meta">
-                <div>
-                  <span>home</span>
-                  <strong>klevyshi.xyz</strong>
-                </div>
-                <div>
-                  <span>vibe</span>
-                  <strong>midnight violet</strong>
-                </div>
-              </div>
+          <figure className="hero-art">
+            <Image
+              src="/ceritanya-radio-sunset.webp"
+              alt="Warm sunset over wooden stairs and a large tree"
+              fill
+              priority
+              sizes="(max-width: 760px) 100vw, 62vw"
+            />
+            <div className="image-shade" aria-hidden="true" />
+            <figcaption>golden hour before the mic turns on.</figcaption>
+            <div className="host-stamp">
+              <Image src="/klevy-avatar-180.webp" alt="Klevy's avatar" width={72} height={72} />
+              <span><small>your host, apparently</small><strong>KLEVY</strong></span>
             </div>
-          </article>
+          </figure>
+        </section>
 
-          <div className="hero-copy enter-two">
-            <p className="eyebrow"><span /> KLEVYSHI / HOME ON THE WEB</p>
-            <h1 id="hero-title">
-              hey, i&apos;m klevy.
-              <span>welcome to my corner.</span>
-            </h1>
-            <p className="hero-lead">
-              A small personal space for the games I like and the places where you can find me.
+        <div className="frequency-strip" aria-label="Ceritanya Radio station details">
+          <div><span>88.?? FM</span><small>frekuensinya ngarang</small></div>
+          <div><span>MAP</span><small>Podcasts, Roblox</small></div>
+          <div><span>MIC</span><small>on kalau berani</small></div>
+          <div><span>RUNDOWN</span><small>optional bgt</small></div>
+        </div>
+
+        <section id="ceritanya" className="story-section" aria-labelledby="story-title">
+          <div className="section-index">
+            <span>01 / ORIGIN STORY</span>
+            <p>ini bagian yang harusnya dijelasin dengan serius.</p>
+          </div>
+          <div className="story-body">
+            <h2 id="story-title">awalnya cuma main Roblox.</h2>
+            <p className="story-lead">
+              terus nemu map Podcasts. ada studio, ada kursi, ada mic, dan ya... masa didiemin?
             </p>
+            <div className="story-columns">
+              <p>
+                akhirnya duduk, nyalain mic, terus ngomong kayak penyiar radio. kadang ada yang
+                ikut ngobrol. kadang cuma aku sama pikiran sendiri. dua-duanya masih masuk program.
+              </p>
+              <p>
+                nama segmennya <strong>Ceritanya Radio</strong>. kenapa “ceritanya”? karena ini memang
+                pura-pura radio, tapi obrolannya beneran. somehow itu justru bagian paling seru.
+              </p>
+            </div>
+            <blockquote>
+              “selamat datang di Ceritanya Radio, tempat topik serius bisa jadi gajelas dalam dua menit.”
+            </blockquote>
 
-            <nav className="social-grid" aria-label="Social profiles">
-              {socialLinks.map((link, index) => {
-                const Icon = link.icon;
-                return (
-                  <a
-                    key={link.name}
-                    className={`social-card ${link.className}`}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Visit Klevyshi on ${link.name}`}
-                  >
-                    <span className="social-index">0{index + 1}</span>
-                    <span className="social-icon"><Icon /></span>
-                    <span className="social-copy">
-                      <strong>{link.name}</strong>
-                      <small>{link.handle}</small>
-                    </span>
-                    <ArrowUpRight className="social-arrow" />
-                  </a>
-                );
-              })}
-            </nav>
+            <ol className="show-flow" aria-label="Alur siaran Ceritanya Radio">
+              {showFlow.map(([time, text]) => (
+                <li key={time}>
+                  <time>{time}</time>
+                  <span>{text}</span>
+                </li>
+              ))}
+            </ol>
           </div>
         </section>
 
-        <section className="games-section enter-three" aria-labelledby="games-title">
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow"><span /> LIBRARY SNAPSHOT</p>
-              <h2 id="games-title">games i like</h2>
-            </div>
-            <p>Eight worlds, zero ranking. Just favorites from the profile.</p>
+        <section id="booth" className="booth-section" aria-labelledby="booth-title">
+          <div className="booth-copy">
+            <p className="section-label">02 / MIC IS ON</p>
+            <h2 id="booth-title">script? ya...<br />lihat nanti.</h2>
+            <p>
+              Ceritanya Radio itu alasan buat ngobrol. bisa soal game, cerita hari ini,
+              opini random, atau sesuatu yang baru kepikiran lima detik sebelum mic nyala.
+            </p>
+            <p className="side-note">ga perlu terlalu dibikin serius sih.</p>
           </div>
 
-          <div className="games-grid">
-            {games.map((game, index) => (
-              <article className={`game-card tone-${game.tone}`} key={game.title}>
-                <span className="game-number">{String(index + 1).padStart(2, "0")}</span>
-                <div className="game-sigil" aria-hidden="true"><i /></div>
-                <div>
-                  <h3>{game.title}</h3>
-                  <p>{game.group}</p>
-                </div>
-              </article>
-            ))}
+          <div className="radio-console">
+            <div className="console-head">
+              <span>CR-01 / INPUT</span>
+              <span className="console-rec"><i aria-hidden="true" /> REC-ish</span>
+            </div>
+            <div className="waveform" aria-hidden="true">
+              {wave.map((height, index) => <i key={index} style={{ height: `${height}%` }} />)}
+            </div>
+            <p className="console-quote">
+              “selamat sore, malam, atau kapan pun. frekuensinya ga ketemu? iya, emang ga ada.”
+            </p>
+            <dl className="console-meta">
+              <div><dt>host</dt><dd>Klevy</dd></div>
+              <div><dt>platform</dt><dd>Roblox</dd></div>
+              <div><dt>map</dt><dd>Podcasts</dd></div>
+              <div><dt>format</dt><dd>ngobrol dulu, mikir belakangan</dd></div>
+            </dl>
           </div>
+        </section>
+
+        <section id="elsewhere" className="elsewhere-section" aria-labelledby="elsewhere-title">
+          <div className="elsewhere-heading">
+            <p className="section-label">03 / STATION PRESETS</p>
+            <h2 id="elsewhere-title">kalau booth-nya kosong,<br />mungkin aku ada di sini.</h2>
+          </div>
+
+          <nav className="preset-list" aria-label="Klevy's social profiles">
+            {socialLinks.map((link, index) => {
+              const Icon = link.icon;
+              return (
+                <a key={link.name} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={`Buka profil ${link.name} Klevy`}>
+                  <span className="preset-number">0{index + 1}</span>
+                  <span className="preset-icon"><Icon /></span>
+                  <span className="preset-name"><strong>{link.name}</strong><small>{link.handle}</small></span>
+                  <span className="preset-note">{link.note}</span>
+                  <ArrowUpRight className="preset-arrow" />
+                </a>
+              );
+            })}
+          </nav>
+        </section>
+
+        <section className="rotation-section" aria-labelledby="rotation-title">
+          <p id="rotation-title">SIDE B / YANG JUGA SERING MUTER</p>
+          <ul>
+            {rotation.map((game) => <li key={game}>{game}</li>)}
+          </ul>
         </section>
       </main>
 
       <footer className="site-footer">
-        <p>KLEVYSHI.XYZ</p>
-        <span>built for the quiet hours.</span>
-        <a href="#top">back to top <span aria-hidden="true">↑</span></a>
+        <div className="footer-brand">
+          <Image src="/logo-mark.svg" alt="" width={40} height={40} />
+          <span><strong>CERITANYA RADIO</strong><small>siaran tidak terjadwal dari internet.</small></span>
+        </div>
+        <p>hosted with questionable preparation by Klevy.</p>
+        <a href="#top">balik ke atas <span aria-hidden="true">↑</span></a>
       </footer>
     </div>
   );

@@ -1,48 +1,48 @@
 import type { Metadata, Viewport } from "next";
-import { Chakra_Petch, Manrope } from "next/font/google";
+import { Bricolage_Grotesque, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-const display = Chakra_Petch({
-  variable: "--font-display",
+const display = Bricolage_Grotesque({
+  variable: "--font-bricolage",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const body = Manrope({
-  variable: "--font-body",
+const mono = IBM_Plex_Mono({
+  variable: "--font-plex",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
 });
 
 export const viewport: Viewport = {
-  themeColor: "#080712",
+  themeColor: "#0b0a0d",
   colorScheme: "dark",
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://klevyshi.xyz"),
   title: {
-    default: "Klevyshi — Personal Space",
-    template: "%s — Klevyshi",
+    default: "Klevyshi | Ceritanya Radio",
+    template: "%s | Klevyshi",
   },
   description:
-    "Klevyshi's personal corner of the internet — games, social links, and a little bit of midnight violet.",
-  keywords: ["Klevyshi", "Klevy", "gaming", "Roblox", "personal website"],
+    "Ceritanya Radio punya Klevy. Obrolan ala penyiar dari map Podcasts di Roblox, tanpa frekuensi dan tanpa rundown yang terlalu niat.",
+  keywords: ["Klevyshi", "Klevy", "Ceritanya Radio", "Podcasts Roblox", "Roblox", "radio"],
   authors: [{ name: "Klevyshi", url: "https://klevyshi.xyz" }],
   creator: "Klevyshi",
   alternates: { canonical: "/" },
   openGraph: {
     type: "profile",
-    locale: "en_US",
+    locale: "id_ID",
     url: "https://klevyshi.xyz",
     siteName: "Klevyshi",
-    title: "Klevyshi — Personal Space",
-    description: "Games, social links, and a little bit of midnight violet.",
+    title: "Klevyshi | Ceritanya Radio",
+    description: "Map Podcasts, mic on, terus ngobrol aja dulu.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Klevyshi — Personal Space",
-    description: "Games, social links, and a little bit of midnight violet.",
+    title: "Klevyshi | Ceritanya Radio",
+    description: "Map Podcasts, mic on, terus ngobrol aja dulu.",
   },
   icons: {
     icon: [
@@ -63,6 +63,7 @@ const personJsonLd = {
   alternateName: "Klevy",
   url: "https://klevyshi.xyz",
   image: "https://klevyshi.xyz/klevy-avatar.webp",
+  description: "Host Ceritanya Radio di map Podcasts, Roblox.",
   sameAs: [
     "https://www.instagram.com/klevyshi",
     "https://www.tiktok.com/@klevyshi",
@@ -72,7 +73,7 @@ const personJsonLd = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
+    <html lang="id" className={`${display.variable} ${mono.variable}`}>
       <body>
         {children}
         <script

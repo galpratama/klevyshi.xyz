@@ -1,44 +1,52 @@
 import { ImageResponse } from "next/og";
 import { LOGO_DATA_URI } from "@/lib/logo-data";
 
-export const alt = "Klevyshi — Personal Space";
+export const alt = "Klevyshi | Ceritanya Radio";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+
+const bars = [28, 52, 76, 42, 88, 61, 35, 72, 94, 48, 64, 32, 82, 58, 40, 91, 68, 46, 79, 34, 55, 86, 63, 43];
 
 export default function OpenGraphImage() {
   return new ImageResponse(
     (
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          position: "relative",
-          overflow: "hidden",
-          backgroundColor: "#080712",
-          color: "#f6f2ff",
-        }}
-      >
-        <div style={{ position: "absolute", width: 760, height: 760, top: -440, left: 120, borderRadius: 999, background: "radial-gradient(circle, rgba(151,81,231,.42), rgba(99,54,171,.1) 42%, transparent 70%)" }} />
-        <div style={{ position: "absolute", inset: 0, display: "flex", background: "linear-gradient(115deg, rgba(255,255,255,.035), transparent 38%, rgba(87,190,232,.07))" }} />
-        <div style={{ width: "100%", display: "flex", alignItems: "center", padding: "72px 82px", gap: 62, position: "relative" }}>
-          <img
-            src={LOGO_DATA_URI}
-            width={264}
-            height={264}
-            alt="Klevyshi logo"
-            style={{ objectFit: "contain" }}
-          />
-          <div style={{ display: "flex", flexDirection: "column", maxWidth: 700 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 12, color: "#cf9cff", fontSize: 19, letterSpacing: 6, marginBottom: 24 }}>
-              <span style={{ width: 34, height: 3, background: "#b274ff" }} /> PERSONAL SPACE
+      <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", position: "relative", overflow: "hidden", padding: "56px 64px 48px", background: "#0b0a0d", color: "#eee8df" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", paddingBottom: 25, borderBottom: "1px solid #302a33" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+            <img src={LOGO_DATA_URI} width={58} height={58} alt="" />
+            <div style={{ display: "flex", flexDirection: "column", gap: 3 }}>
+              <span style={{ fontSize: 17, fontWeight: 700, letterSpacing: 3 }}>KLEVYSHI</span>
+              <span style={{ fontSize: 11, color: "#817982", letterSpacing: 2 }}>INTERNET RADIO-ISH</span>
             </div>
-            <span style={{ fontSize: 74, fontWeight: 800, lineHeight: 1 }}>hey, i&apos;m klevy.</span>
-            <span style={{ fontSize: 74, fontWeight: 800, lineHeight: 1.06, color: "#cda6ff" }}>welcome to my corner.</span>
-            <span style={{ fontSize: 25, color: "#aaa4bc", marginTop: 28 }}>klevyshi.xyz</span>
+          </div>
+          <div style={{ display: "flex", alignItems: "center", gap: 10, color: "#ff704f", fontSize: 13, letterSpacing: 2 }}>
+            <span style={{ width: 10, height: 10, borderRadius: 99, background: "#ff704f" }} /> REC, KALAU LAGI MAIN
           </div>
         </div>
-        <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: 5, background: "linear-gradient(90deg, #7040b8, #c48cff 45%, #79d9ff)" }} />
+
+        <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 54 }}>
+          <div style={{ display: "flex", flexDirection: "column", maxWidth: 690 }}>
+            <span style={{ color: "#857d87", fontSize: 13, letterSpacing: 3, marginBottom: 24 }}>MAP PODCASTS / ROBLOX</span>
+            <span style={{ fontSize: 89, fontWeight: 700, lineHeight: .82, letterSpacing: -6 }}>ceritanya</span>
+            <span style={{ fontSize: 108, fontWeight: 500, lineHeight: .9, letterSpacing: -7, color: "#ff704f" }}>radio.</span>
+            <span style={{ marginTop: 30, color: "#b1a8b0", fontSize: 20 }}>mic on, terus ngobrol aja dulu.</span>
+          </div>
+
+          <div style={{ width: 330, height: 250, display: "flex", flexDirection: "column", padding: 25, border: "1px solid #302a33", background: "#121016" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", color: "#716b75", fontSize: 10, letterSpacing: 2 }}>
+              <span>CR-01 / INPUT</span><span style={{ color: "#ff704f" }}>88.?? FM</span>
+            </div>
+            <div style={{ flex: 1, display: "flex", alignItems: "center", gap: 6, marginTop: 20, borderTop: "1px solid #302a33", borderBottom: "1px solid #302a33" }}>
+              {bars.map((height, index) => (
+                <span key={index} style={{ width: 5, height: `${height}%`, background: index % 3 === 0 ? "#ff704f" : "#ab91f1", opacity: .86 }} />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div style={{ display: "flex", justifyContent: "space-between", paddingTop: 18, borderTop: "1px solid #302a33", color: "#716b75", fontSize: 12, letterSpacing: 1.5 }}>
+          <span>HOST: KLEVY</span><span>KLEVYSHI.XYZ</span>
+        </div>
       </div>
     ),
     size,

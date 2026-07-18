@@ -3,10 +3,10 @@
 export default function ErrorPage({ reset }: { error: Error & { digest?: string }; reset: () => void }) {
   return (
     <main className="state-page">
-      <p className="eyebrow"><span /> SOMETHING GLITCHED</p>
-      <h1>oops.</h1>
-      <p>The page hit an unexpected error.</p>
-      <button type="button" onClick={reset}>try again</button>
+      <p className="eyebrow">SIGNAL LOST</p>
+      <h1>waduh.</h1>
+      <p>webnya lagi keselek kabel. coba sekali lagi.</p>
+      <button type="button" onClick={reset}>nyalain ulang</button>
     </main>
   );
 }
