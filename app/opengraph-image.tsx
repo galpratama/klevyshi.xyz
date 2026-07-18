@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { LOGO_DATA_URI } from "@/lib/logo-data";
 
-export const alt = "Klevyshi | Personal corner on the internet";
+export const alt = "Klevy シロガネ | Personal corner on the internet";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -14,8 +14,8 @@ export default function OpenGraphImage() {
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
             <img src={LOGO_DATA_URI} width={58} height={58} alt="" />
             <div style={{ display: "flex", flexDirection: "column", gap: 3 }}>
-              <span style={{ fontSize: 17, fontWeight: 700, letterSpacing: 3 }}>KLEVYSHI</span>
-              <span style={{ fontSize: 11, color: "#817982", letterSpacing: 2 }}>PERSONAL CORNER ON THE INTERNET</span>
+              <span style={{ fontSize: 17, fontWeight: 700, letterSpacing: 3 }}>KLEVY シロガネ</span>
+              <span style={{ fontSize: 11, color: "#817982", letterSpacing: 2 }}>クレヴィ / PERSONAL CORNER</span>
             </div>
           </div>
           <span style={{ color: "#a88cf0", fontSize: 12, letterSpacing: 2 }}>FRIENDLY / CALM / PLAYFUL</span>

@@ -57,11 +57,11 @@ export default function Home() {
       <div className="noise" aria-hidden="true" />
 
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="Klevyshi home">
+        <a className="brand" href="#top" aria-label="Klevy シロガネ home">
           <Image src="/logo-mark.svg" alt="" width={44} height={44} priority />
           <span>
-            <strong>KLEVYSHI</strong>
-            <small>personal corner on the internet</small>
+            <strong>KLEVY <span lang="ja">シロガネ</span></strong>
+            <small><span lang="ja">クレヴィ</span> / personal corner</small>
           </span>
         </a>
         <nav aria-label="Main navigation">
@@ -94,7 +94,7 @@ export default function Home() {
               biasanya lagi main game, dengerin jazz, ngulik sesuatu, atau tiba-tiba
               sok jadi penyiar di Roblox. isinya random sih. ya kurang lebih kayak orangnya.
             </p>
-            <p className="hero-aliases">Klevy buat sehari-hari. Klepi boleh. Bang Klep juga udah terlanjur nempel.</p>
+            <p className="hero-aliases">Klevy buat sehari-hari. Japanese reading-nya: <span lang="ja">クレヴィ</span> (kurevi). Klepi boleh. Bang Klep juga udah terlanjur nempel.</p>
           </div>
 
           <p className="hero-caption">caught in the middle, literally.</p>
@@ -265,7 +265,7 @@ export default function Home() {
       <footer className="site-footer">
         <div className="footer-brand">
           <Image src="/logo-mark.svg" alt="" width={40} height={40} />
-          <span><strong>KLEVYSHI</strong><small>personal corner on the internet.</small></span>
+          <span><strong>KLEVY <span lang="ja">シロガネ</span></strong><small><span lang="ja">クレヴィ</span> / personal corner.</small></span>
         </div>
         <p>friendly, calm, playful. tergantung ping.</p>
         <a href="#top">balik ke atas <span aria-hidden="true">↑</span></a>

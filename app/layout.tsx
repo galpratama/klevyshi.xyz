@@ -22,14 +22,16 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://klevyshi.xyz"),
   title: {
-    default: "Klevyshi | Personal corner on the internet",
-    template: "%s | Klevyshi",
+    default: "Klevy シロガネ | Personal corner on the internet",
+    template: "%s | Klevy シロガネ",
   },
   description:
     "Personal corner milik Klevy. Friendly, calm, playful. Suka Roblox, Ayodance, Cities: Skylines, coding, gitar, jazz, dan kadang siaran Ceritanya Radio di 103.9 FM.",
   keywords: [
     "Klevyshi",
     "Klevy",
+    "Klevy シロガネ",
+    "クレヴィ",
     "Klepi",
     "Bang Klep",
     "Roblox",
@@ -38,20 +40,20 @@ export const metadata: Metadata = {
     "Ceritanya Radio",
     "103.9 FM",
   ],
-  authors: [{ name: "Klevyshi", url: "https://klevyshi.xyz" }],
-  creator: "Klevyshi",
+  authors: [{ name: "Klevy シロガネ", url: "https://klevyshi.xyz" }],
+  creator: "Klevy シロガネ",
   alternates: { canonical: "/" },
   openGraph: {
     type: "profile",
     locale: "id_ID",
     url: "https://klevyshi.xyz",
-    siteName: "Klevyshi",
-    title: "Klevyshi | Personal corner on the internet",
+    siteName: "Klevy シロガネ",
+    title: "Klevy シロガネ | Personal corner on the internet",
     description: "Friendly, calm, playful. Kadang plenger, kadang ngomongnya kepanjangan.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Klevyshi | Personal corner on the internet",
+    title: "Klevy シロガネ | Personal corner on the internet",
     description: "Friendly, calm, playful. Kadang plenger, kadang ngomongnya kepanjangan.",
   },
   icons: {
@@ -69,8 +71,8 @@ export const metadata: Metadata = {
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Klevyshi",
-  alternateName: ["Klevy", "Klepi", "Bang Klep"],
+  name: "Klevy シロガネ",
+  alternateName: ["クレヴィ", "Kurevi", "Klevyshi", "Klevy", "Klepi", "Bang Klep"],
   url: "https://klevyshi.xyz",
   image: "https://klevyshi.xyz/klevy-hero.webp",
   description:
