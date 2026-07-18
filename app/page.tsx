@@ -198,7 +198,16 @@ export default function Home() {
             </p>
 
             <div className="mini-wave" aria-hidden="true">
-              {wave.map((height, index) => <i key={index} style={{ height: `${height}%` }} />)}
+              {wave.map((height, index) => (
+                <i
+                  key={index}
+                  style={{
+                    height: `${height}%`,
+                    animationDelay: `-${(index % 11) * 80}ms`,
+                    animationDuration: `${720 + (index % 7) * 85}ms`,
+                  }}
+                />
+              ))}
             </div>
 
             <ol className="compact-flow" aria-label="Alur Ceritanya Radio">

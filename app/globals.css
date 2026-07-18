@@ -401,10 +401,22 @@ p, li, dd, blockquote { text-wrap: pretty; }
   display: flex;
   align-items: center;
   gap: 4px;
+  overflow: hidden;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
-.mini-wave i { flex: 1 1 2px; min-width: 2px; max-width: 5px; background: var(--violet); opacity: .82; }
+.mini-wave i {
+  flex: 1 1 2px;
+  min-width: 2px;
+  max-width: 5px;
+  background: var(--violet);
+  opacity: .82;
+  transform-origin: center;
+  animation-name: spectrum-wave;
+  animation-timing-function: cubic-bezier(.45, 0, .55, 1);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
 .mini-wave i:nth-child(4n) { background: var(--orange); }
 .compact-flow { margin: 0; padding: 0; list-style: none; }
 .compact-flow li {
@@ -482,6 +494,12 @@ p, li, dd, blockquote { text-wrap: pretty; }
 @keyframes hero-in { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes art-in { from { opacity: 0; transform: scale(.985); } to { opacity: 1; transform: scale(1); } }
 @keyframes dot-pulse { 0%, 100% { opacity: .45; transform: scale(.82); } 50% { opacity: 1; transform: scale(1); } }
+@keyframes spectrum-wave {
+  0% { transform: scaleY(.28); opacity: .52; }
+  32% { transform: scaleY(.76); opacity: .86; }
+  58% { transform: scaleY(.44); opacity: .68; }
+  100% { transform: scaleY(1); opacity: .96; }
+}
 
 @media (hover: hover) and (pointer: fine) {
   .site-header nav a:hover { color: var(--foreground); background: var(--surface-soft); }
@@ -629,5 +647,9 @@ p, li, dd, blockquote { text-wrap: pretty; }
     animation-duration: .01ms !important;
     animation-delay: 0ms !important;
     transition-duration: .01ms !important;
+  }
+  .mini-wave i {
+    animation: none !important;
+    transform: none !important;
   }
 }
