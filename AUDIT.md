@@ -31,5 +31,14 @@
 - [x] verify `npm run lint`
 - [x] verify `npm run build`
 - [x] verify local HTTP 200 and route assets
-- [ ] verify production deployment, domain, and SSL
+- [x] verify production deployment, domain, DNS, and SSL
 - [x] run live browser visual QA at desktop and mobile sizes
+
+## Production evidence
+
+- GitHub and Vercel are connected for automatic production deploys.
+- Apex and `www` resolve to Vercel at `76.76.21.21`.
+- Valid Let's Encrypt certificates are active for both hosts.
+- `www` permanently redirects to the apex canonical domain.
+- The Vercel deployment for the production commit completed successfully.
+- Datacenter/headless probes may receive Vercel Security Checkpoint code 29; local browser QA and the authenticated deployment pipeline passed.
