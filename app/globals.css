@@ -843,7 +843,7 @@ p, li, dd, blockquote { text-wrap: pretty; }
   .lore-note { margin-top: 42px; }
   .lore-note p { font-size: 16px; }
 
-  .wide-art { min-height: 500px; }
+  .wide-art { min-height: 0; aspect-ratio: 941 / 1672; }
   .wide-art > picture > img { object-position: center; }
   .interest-gallery { margin-top: 12px; grid-template-columns: 1fr; grid-template-rows: none; grid-auto-rows: auto; gap: 12px; }
   .interest-panel { grid-column: 1; grid-row: auto; min-height: 220px; padding: 24px; }
