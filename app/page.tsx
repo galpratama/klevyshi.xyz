@@ -149,13 +149,16 @@ export default function Home() {
           </div>
 
           <figure className="wide-art">
-            <Image
-              src="/klevy-play.webp"
-              alt="Klevy playing a rhythm game in a neon-lit arcade"
-              fill
-              sizes="(max-width: 760px) 100vw, 1240px"
-            />
-            <figcaption>Ayodance energy, tanpa harus jago dulu.</figcaption>
+            <picture>
+              <source media="(max-width: 680px)" srcSet="/klevy-night-city-mobile.webp" />
+              <Image
+                src="/klevy-night-city.webp"
+                alt="Klevy on a rooftop above a neon night city with a guitar case and glowing rhythm-like roads"
+                fill
+                sizes="(max-width: 760px) 100vw, 1240px"
+              />
+            </picture>
+            <figcaption>semua rabbit hole ketemu setelah tengah malam.</figcaption>
           </figure>
 
           <div className="interest-gallery">

@@ -284,8 +284,9 @@ p, li, dd, blockquote { text-wrap: pretty; }
   background: var(--surface);
 }
 .section-art > img,
-.wide-art > img,
+.wide-art > picture > img,
 .radio-art > img { object-fit: cover; }
+.wide-art > picture { position: absolute; inset: 0; }
 .section-art { min-height: 590px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 38px), calc(100% - 38px) 100%, 0 100%); }
 .about-art > img { object-position: center; }
 .section-art::after,
@@ -330,7 +331,7 @@ p, li, dd, blockquote { text-wrap: pretty; }
   min-height: 660px;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 42px), calc(100% - 42px) 100%, 0 100%);
 }
-.wide-art > img { object-position: center; }
+.wide-art > picture > img { object-position: center; }
 .interest-gallery {
   margin-top: 24px;
   display: grid;
@@ -842,8 +843,8 @@ p, li, dd, blockquote { text-wrap: pretty; }
   .lore-note { margin-top: 42px; }
   .lore-note p { font-size: 16px; }
 
-  .wide-art { min-height: 430px; }
-  .wide-art > img { object-position: 47% center; }
+  .wide-art { min-height: 500px; }
+  .wide-art > picture > img { object-position: center; }
   .interest-gallery { margin-top: 12px; grid-template-columns: 1fr; grid-template-rows: none; grid-auto-rows: auto; gap: 12px; }
   .interest-panel { grid-column: 1; grid-row: auto; min-height: 220px; padding: 24px; }
   .interest-panel--play { min-height: 310px; }
