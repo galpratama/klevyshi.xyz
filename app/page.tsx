@@ -34,11 +34,11 @@ const socialLinks = [
 ];
 
 const interests = [
-  { label: "mostly playing", value: "Roblox + Ayodance" },
-  { label: "city brain", value: "Cities: Skylines" },
-  { label: "learning arc", value: "gitar, pelan-pelan" },
-  { label: "quiet rabbit hole", value: "coding dan ngulik" },
-  { label: "on repeat", value: "jazz, Coldiac, Ardhito, Laufey" },
+  { slug: "play", label: "mostly playing", value: "Roblox + Ayodance", detail: "hangout / rhythm / satu ronde lagi" },
+  { slug: "city", label: "city brain", value: "Cities: Skylines", detail: "zoning dulu, macet belakangan" },
+  { slug: "guitar", label: "learning arc", value: "gitar, pelan-pelan", detail: "satu chord, ulang berkali-kali" },
+  { slug: "code", label: "quiet rabbit hole", value: "coding + ngulik", detail: "satu tab jadi dua belas" },
+  { slug: "music", label: "on repeat", value: "jazz, mostly", detail: "Coldiac / Ardhito / Laufey" },
 ];
 
 const showFlow = [
@@ -158,13 +158,34 @@ export default function Home() {
             <figcaption>Ayodance energy, tanpa harus jago dulu.</figcaption>
           </figure>
 
-          <div className="interests-list">
+          <div className="interest-gallery">
             {interests.map((item, index) => (
-              <div key={item.label}>
-                <span>0{index + 1}</span>
-                <small>{item.label}</small>
-                <strong>{item.value}</strong>
-              </div>
+              <article key={item.label} className={`interest-panel interest-panel--${item.slug}`}>
+                <header>
+                  <span>0{index + 1}</span>
+                  <small>{item.label}</small>
+                </header>
+                <div className="interest-panel-copy">
+                  <strong>{item.value}</strong>
+                  <p>{item.detail}</p>
+                </div>
+
+                <div className="interest-visual" aria-hidden="true">
+                  {item.slug === "play" && (
+                    <span className="rhythm-lanes"><i /><i /><i /><i /><i /></span>
+                  )}
+                  {item.slug === "city" && (
+                    <span className="mini-skyline"><i /><i /><i /><i /><i /><i /><i /></span>
+                  )}
+                  {item.slug === "guitar" && (
+                    <span className="guitar-neck"><i /><i /><i /><i /><i /><i /></span>
+                  )}
+                  {item.slug === "code" && (
+                    <span className="terminal-shell"><b /><i /><i /><i /></span>
+                  )}
+                  {item.slug === "music" && <span className="vinyl-disc"><i /></span>}
+                </div>
+              </article>
             ))}
           </div>
 
