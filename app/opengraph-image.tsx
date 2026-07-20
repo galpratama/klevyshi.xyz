@@ -24,15 +24,15 @@ export default function OpenGraphImage() {
         <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 58 }}>
           <div style={{ display: "flex", flexDirection: "column", maxWidth: 720 }}>
             <span style={{ color: "#817982", fontSize: 13, letterSpacing: 3, marginBottom: 26 }}>HI, INTERNET.</span>
-            <span style={{ fontSize: 92, fontWeight: 700, lineHeight: .9, letterSpacing: -6 }}>hi, aku</span>
+            <span style={{ fontSize: 92, fontWeight: 700, lineHeight: .9, letterSpacing: -6 }}>Hi, I&apos;m</span>
             <span style={{ fontSize: 118, fontWeight: 500, lineHeight: .88, letterSpacing: -7, color: "#ff754f" }}>Klevy.</span>
-            <span style={{ marginTop: 28, color: "#b7aeb6", fontSize: 19 }}>kadang plenger, kadang ngomongnya kepanjangan.</span>
+            <span style={{ marginTop: 28, color: "#b7aeb6", fontSize: 19 }}>Sometimes spaced out, sometimes talking for way too long.</span>
           </div>
 
           <div style={{ width: 330, display: "flex", flexDirection: "column", borderTop: "1px solid #302a33" }}>
             {[
               ["MOSTLY PLAYING", "Roblox + Ayodance"],
-              ["QUIET RABBIT HOLE", "coding dan ngulik"],
+              ["QUIET RABBIT HOLE", "coding + tinkering"],
               ["ON REPEAT", "something jazzy"],
               ["ALSO KNOWN AS", "Klepi / Bang Klep"],
             ].map(([label, value]) => (

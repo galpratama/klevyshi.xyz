@@ -4,9 +4,9 @@ export default function ErrorPage({ reset }: { error: Error & { digest?: string 
   return (
     <main className="state-page">
       <p className="eyebrow">SIGNAL LOST</p>
-      <h1>waduh.</h1>
-      <p>webnya lagi keselek kabel. coba sekali lagi.</p>
-      <button type="button" onClick={reset}>nyalain ulang</button>
+      <h1>Well, this is awkward.</h1>
+      <p>The site tripped over a cable. Give it another shot.</p>
+      <button type="button" onClick={reset}>Try again</button>
     </main>
   );
 }

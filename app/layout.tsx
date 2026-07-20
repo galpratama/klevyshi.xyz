@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | Klevy シロガネ",
   },
   description:
-    "Personal corner milik Klevy. Friendly, calm, playful. Suka Roblox, Ayodance, Cities: Skylines, coding, gitar, jazz, dan kadang siaran Ceritanya Radio di 103.9 FM.",
+    "Klevy's personal corner on the internet. Friendly, calm, playful. Into Roblox, Ayodance, Cities: Skylines, coding, guitar, jazz, and the occasional Ceritanya Radio broadcast on 103.9 FM.",
   keywords: [
     "Klevyshi",
     "Klevy",
@@ -45,16 +45,16 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   openGraph: {
     type: "profile",
-    locale: "id_ID",
+    locale: "en_US",
     url: "https://klevyshi.xyz",
     siteName: "Klevy シロガネ",
     title: "Klevy シロガネ | Personal corner on the internet",
-    description: "Friendly, calm, playful. Kadang plenger, kadang ngomongnya kepanjangan.",
+    description: "Friendly, calm, playful. Sometimes spaced out, sometimes talking for way too long.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Klevy シロガネ | Personal corner on the internet",
-    description: "Friendly, calm, playful. Kadang plenger, kadang ngomongnya kepanjangan.",
+    description: "Friendly, calm, playful. Sometimes spaced out, sometimes talking for way too long.",
   },
   icons: {
     icon: [
@@ -76,7 +76,7 @@ const personJsonLd = {
   url: "https://klevyshi.xyz",
   image: "https://klevyshi.xyz/klevy-hero.webp",
   description:
-    "Friendly, calm, playful. Suka Roblox, Ayodance, Cities: Skylines, coding, belajar gitar, jazz, dan membawakan Ceritanya Radio.",
+    "Friendly, calm, playful. Into Roblox, Ayodance, Cities: Skylines, coding, learning guitar, jazz, and hosting Ceritanya Radio.",
   sameAs: [
     "https://www.instagram.com/klevyshi",
     "https://www.tiktok.com/@klevyshi",
@@ -86,7 +86,7 @@ const personJsonLd = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="id" className={`${display.variable} ${mono.variable}`}>
+    <html lang="en" className={`${display.variable} ${mono.variable}`}>
       <body>
         {children}
         <script

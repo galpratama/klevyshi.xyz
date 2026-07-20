@@ -11,7 +11,7 @@ const socialLinks = [
     name: "Roblox",
     slug: "roblox",
     handle: "klevyshi",
-    note: "mostly here. kalau ga ketemu, mungkin lagi AFK.",
+    note: "Mostly here. If I'm missing, I'm probably AFK.",
     href: "https://www.roblox.com/share?code=70e0c65e2c6c4f4bad3270886038109a&type=Profile&source=ProfileShare&stamp=1784366537053",
     icon: RobloxIcon,
   },
@@ -19,7 +19,7 @@ const socialLinks = [
     name: "Instagram",
     slug: "instagram",
     handle: "@klevyshi",
-    note: "things outside the game",
+    note: "Things outside the game.",
     href: "https://www.instagram.com/klevyshi",
     icon: InstagramIcon,
   },
@@ -27,25 +27,25 @@ const socialLinks = [
     name: "TikTok",
     slug: "tiktok",
     handle: "@klevyshi",
-    note: "upload kalau mood-nya sempat",
+    note: "Uploads when the mood cooperates.",
     href: "https://www.tiktok.com/@klevyshi",
     icon: TikTokIcon,
   },
 ];
 
 const interests = [
-  { slug: "play", label: "mostly playing", value: "Roblox + Ayodance", detail: "hangout / rhythm / satu ronde lagi" },
-  { slug: "city", label: "city brain", value: "Cities: Skylines", detail: "zoning dulu, macet belakangan" },
-  { slug: "guitar", label: "learning arc", value: "gitar, pelan-pelan", detail: "satu chord, ulang berkali-kali" },
-  { slug: "code", label: "quiet rabbit hole", value: "coding + ngulik", detail: "satu tab jadi dua belas" },
+  { slug: "play", label: "mostly playing", value: "Roblox + Ayodance", detail: "hangouts / rhythm / one more round" },
+  { slug: "city", label: "city brain", value: "Cities: Skylines", detail: "zone first, fix traffic later" },
+  { slug: "guitar", label: "learning arc", value: "guitar, slowly", detail: "one chord, over and over" },
+  { slug: "code", label: "quiet rabbit hole", value: "coding + tinkering", detail: "one tab becomes twelve" },
   { slug: "music", label: "on repeat", value: "jazz, mostly", detail: "Coldiac / Ardhito / Laufey" },
 ];
 
 const showFlow = [
-  ["00:00", "spawn, terus cari booth yang enak"],
-  ["00:02", "mic check. sok formal dulu dikit"],
-  ["00:08", "mulai satu topik yang niatnya serius"],
-  ["00:??", "udah lupa tadi awalnya bahas apa"],
+  ["00:00", "Spawn, then find a booth that feels right."],
+  ["00:02", "Mic check. Pretend to be formal for a minute."],
+  ["00:08", "Start one topic that was supposed to be serious."],
+  ["00:??", "Forget what I was talking about in the first place."],
 ];
 
 const wave = [32, 58, 41, 79, 49, 91, 65, 38, 74, 96, 52, 69, 35, 84, 61, 43, 93, 72, 48, 81, 37, 57, 88, 66, 45, 77, 98, 60, 39, 71, 51, 86];
@@ -53,7 +53,7 @@ const wave = [32, 58, 41, 79, 49, 91, 65, 38, 74, 96, 52, 69, 35, 84, 61, 43, 93
 export default function Home() {
   return (
     <div className="page-root">
-      <a className="skip-link" href="#main-content">langsung ke konten</a>
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <div className="noise" aria-hidden="true" />
 
       <header className="site-header">
@@ -89,12 +89,12 @@ export default function Home() {
           <div className="personal-hero-copy">
             <p className="micro-label">KLEVYSHI.XYZ / PERSONAL CORNER</p>
             <p className="hero-traits"><span>friendly</span><span>calm</span><span>playful</span></p>
-            <h1 id="hero-title">hi, aku<br /><em>Klevy.</em></h1>
+            <h1 id="hero-title">Hi, I&apos;m<br /><em>Klevy.</em></h1>
             <p className="hero-lede">
-              biasanya lagi main game, dengerin jazz, ngulik sesuatu, atau tiba-tiba
-              sok jadi penyiar di Roblox. isinya random sih. ya kurang lebih kayak orangnya.
+              I&apos;m usually playing something, listening to jazz, tinkering with code, or
+              pretending to be a radio host in Roblox. It&apos;s random. So am I, apparently.
             </p>
-            <p className="hero-aliases">Klevy buat sehari-hari. Japanese reading-nya: <span lang="ja">クレヴィ</span> (kurevi). Klepi boleh. Bang Klep juga udah terlanjur nempel.</p>
+            <p className="hero-aliases">Most people call me Klevy. In Japanese: <span lang="ja">クレヴィ</span> (kurevi). Klepi works too. Bang Klep has stuck around at this point.</p>
           </div>
 
           <p className="hero-caption">caught in the middle, literally.</p>
@@ -110,7 +110,7 @@ export default function Home() {
         <section id="about" className="about-section" aria-labelledby="about-title">
           <div className="section-heading">
             <p className="section-label">01 / KLEVY LORE</p>
-            <h2 id="about-title">kalau lagi diem,<br />mungkin cuma plenger.</h2>
+            <h2 id="about-title">When I&apos;m quiet,<br />my mind is probably elsewhere.</h2>
           </div>
 
           <div className="about-layout">
@@ -121,22 +121,22 @@ export default function Home() {
                 fill
                 sizes="(max-width: 900px) 100vw, 58vw"
               />
-              <figcaption>coding, gitar, terus lupa tadi mau ngapain.</figcaption>
+              <figcaption>Coding, guitar, then forgetting what I was doing.</figcaption>
             </figure>
 
             <div className="about-copy">
-              <p className="about-lead">friendly, calm, playful. urutannya bisa berubah tergantung hari.</p>
+              <p className="about-lead">Friendly, calm, playful. The order changes depending on the day.</p>
               <p>
-                aku sering plenger sih. tapi begitu obrolannya serius, mendadak bisa panjang.
-                apalagi kalau topiknya nyangkut sama sesuatu yang lagi aku pelajarin atau ngulik sendiri.
+                I zone out a lot. But once a conversation gets serious, I can keep going for a while.
+                Especially when it touches something I&apos;m learning or figuring out on my own.
               </p>
               <p>
-                sisanya cukup sederhana. main game, utak-atik coding, nyoba belajar gitar,
-                terus balik lagi ke hal yang bikin penasaran. kadang selesai. kadang jadi tab browser baru.
+                The rest is pretty simple: games, code, a little guitar practice, then back to
+                whatever made me curious. Sometimes I finish it. Sometimes it becomes another browser tab.
               </p>
               <div className="lore-note">
                 <span>small lore</span>
-                <p>kalem bukan berarti ga random. randomnya cuma nunggu timing.</p>
+                <p>Calm on the outside. Random when the timing is right.</p>
               </div>
             </div>
           </div>
@@ -145,7 +145,7 @@ export default function Home() {
         <section id="interests" className="interests-section" aria-labelledby="interests-title">
           <div className="section-heading split-heading">
             <p className="section-label">02 / CURRENTLY INTO</p>
-            <h2 id="interests-title">main sebentar.<br />tahu-tahu udah malam.</h2>
+            <h2 id="interests-title">One quick game.<br />Suddenly, it&apos;s midnight.</h2>
           </div>
 
           <figure className="wide-art">
@@ -158,7 +158,7 @@ export default function Home() {
                 sizes="(max-width: 760px) 100vw, 1240px"
               />
             </picture>
-            <figcaption>semua rabbit hole ketemu setelah tengah malam.</figcaption>
+            <figcaption>All my rabbit holes meet after midnight.</figcaption>
           </figure>
 
           <div className="interest-gallery">
@@ -193,10 +193,10 @@ export default function Home() {
           </div>
 
           <div className="music-note">
-            <p>kalau lagi ga main</p>
+            <p>when I&apos;m not playing</p>
             <blockquote>
-              biasanya ada jazz di background. Coldiac, Ardhito Pramono, Laufey,
-              terus siapa pun yang bikin malam terasa sedikit lebih pelan.
+              There&apos;s usually jazz in the background. Coldiac, Ardhito Pramono, Laufey,
+              and anyone who makes the night feel a little slower.
             </blockquote>
           </div>
         </section>
@@ -214,14 +214,14 @@ export default function Home() {
           <div className="radio-copy">
             <p className="section-label">03 / ONE OF MY THINGS</p>
             <p className="frequency"><i aria-hidden="true" /> 103.9 FM</p>
-            <h2 id="radio-title">terus, ada<br /><em>Ceritanya Radio.</em></h2>
+            <h2 id="radio-title">And then there&apos;s<br /><em>Ceritanya Radio.</em></h2>
             <p className="radio-lede">
-              kalau lagi mampir ke map Podcasts di Roblox, kadang aku duduk di booth,
-              buka mic, lalu bawain obrolan ala radio. frekuensinya ngasal. obrolannya kadang engga.
+              When I drop by the Podcasts map on Roblox, I sometimes take a seat in the booth,
+              turn on the mic, and host a radio-style conversation. The frequency is made up. The conversation isn&apos;t always.
             </p>
             <p>
-              di sini sisi playful sama sisi seriusku suka ketemu. bisa mulai dari game,
-              cerita hari itu, atau opini random. beberapa menit kemudian biasanya udah belok ke mana-mana.
+              This is where my playful side and serious side tend to meet. It might start with a game,
+              something that happened that day, or a random opinion. A few minutes later, we&apos;re usually somewhere else entirely.
             </p>
 
             <div className="mini-wave" aria-hidden="true">
@@ -237,7 +237,7 @@ export default function Home() {
               ))}
             </div>
 
-            <ol className="compact-flow" aria-label="Alur Ceritanya Radio">
+            <ol className="compact-flow" aria-label="Ceritanya Radio rundown">
               {showFlow.map(([time, text]) => (
                 <li key={time}><time>{time}</time><span>{text}</span></li>
               ))}
@@ -248,7 +248,7 @@ export default function Home() {
         <section id="elsewhere" className="elsewhere-section" aria-labelledby="elsewhere-title">
           <div className="section-heading split-heading">
             <p className="section-label">04 / FIND ME</p>
-            <h2 id="elsewhere-title">kalau mau nyapa,<br />aku biasanya ada di sini.</h2>
+            <h2 id="elsewhere-title">If you want to say hi,<br />I&apos;m usually around here.</h2>
           </div>
 
           <nav className="social-board" aria-label="Klevy's social profiles">
@@ -261,7 +261,7 @@ export default function Home() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`Buka profil ${link.name} Klevy`}
+                  aria-label={`Open Klevy's ${link.name} profile`}
                 >
                   {link.slug === "roblox" && (
                     <span className="social-portrait" aria-hidden="true">
@@ -291,8 +291,8 @@ export default function Home() {
           <Image src="/logo-mark.svg" alt="" width={40} height={40} />
           <span><strong>KLEVY <span lang="ja">シロガネ</span></strong><small><span lang="ja">クレヴィ</span> / personal corner.</small></span>
         </div>
-        <p>friendly, calm, playful. tergantung ping.</p>
-        <a href="#top">balik ke atas <span aria-hidden="true">↑</span></a>
+        <p>Friendly, calm, playful. Depends on the ping.</p>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
       </footer>
     </div>
   );

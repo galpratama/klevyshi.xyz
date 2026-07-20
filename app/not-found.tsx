@@ -4,9 +4,9 @@ export default function NotFound() {
   return (
     <main className="state-page">
       <p className="eyebrow">OFF AIR / 404</p>
-      <h1>nyasar.</h1>
-      <p>halamannya ga ikut siaran.</p>
-      <Link href="/">balik ke studio</Link>
+      <h1>Wrong turn.</h1>
+      <p>This page never made it on air.</p>
+      <Link href="/">Back to the studio</Link>
     </main>
   );
 }
