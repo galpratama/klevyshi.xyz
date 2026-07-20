@@ -5,6 +5,7 @@ import {
   RobloxIcon,
   TikTokIcon,
 } from "@/components/brand-icons";
+import { SiteHeaderActions } from "@/components/site-header-actions";
 
 const socialLinks = [
   {
@@ -70,7 +71,7 @@ export default function Home() {
           <a href="#radio">103.9 FM</a>
           <a href="#elsewhere">find me</a>
         </nav>
-        <p className="header-mood"><i aria-hidden="true" /> mood: calm, mostly</p>
+        <SiteHeaderActions />
       </header>
 
       <main id="main-content">
